@@ -7,7 +7,7 @@ import {
   TableData,
 } from './TransactionHistory.styled';
 
-const TransactionHistory = ({ items }) => {
+export const TransactionHistory = ({ items }) => {
     return (
         <Table>
         <TableHead>
@@ -49,4 +49,4 @@ TransactionHistory.propTypes = {
     ).isRequired
 }
 
-export default TransactionHistory;
+// export default TransactionHistory;

@@ -1,20 +1,22 @@
 import styled from 'styled-components';
 
 export const UserProfile = styled.div`
-  width: 50%;
+  width: 30%;
   margin: 0 auto 20px;
   border: 1px solid var(--grey);
+  border-radius: 2px;
 `;
 
 export const UserDescription = styled.div`
   text-align: center;
 `;
 
-export const Avatar = styled.img`
+export const UserAvatar = styled.img`
   width: 300px;
   height: 300px;
   border-radius: 50%;
   margin: 20px auto;
+  background-color: aquamarine;
 `;
 
 export const UserName = styled.p`
@@ -29,7 +31,7 @@ export const UserTag = styled.p`
   font-size: 22px;
 `;
 
-export const Location = styled.p`
+export const UserLocation = styled.p`
   margin-bottom: 20px;
   color: var(--grey);
   font-size: 22px;
@@ -37,8 +39,6 @@ export const Location = styled.p`
 
 export const StatList = styled.ul`
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   border-top: 1px solid var(--grey);
   background-color: var(--bg-grey);
   text-align: center;
@@ -46,7 +46,6 @@ export const StatList = styled.ul`
 
 export const StatListItem = styled.li`
   width: 100%;
-  height: 100%;
   padding: 20px 0;
   :not(:last-child) {
     border-right: 1px solid var(--grey);

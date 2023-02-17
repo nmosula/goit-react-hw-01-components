@@ -4,9 +4,10 @@ import 'modern-normalize';
 export const GlobalStyle = createGlobalStyle`
         :root {
           --black: #00000;
-          --grey: #777777;
+          --grey: #999999;
           --bg-grey: #e7f5f9;
           --aqua: #25b0d3;
+          --white: #fff;
         }
         body {
           color: var(--black);

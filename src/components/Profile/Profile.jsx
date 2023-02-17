@@ -1,36 +1,43 @@
 import propTypes from "prop-types";
-import "./profile.css";
+import {
+  UserProfile,
+  UserDescription,
+  UserAvatar,
+  UserName,
+  UserTag,
+  UserLocation,
+  StatList,
+  StatListItem,
+  StatLabel,
+  StatValue,
+} from './Profile.styled';
 
-const Profile = ({ username, tag, location, avatar = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats: { followers, views, likes } }) => {
+export const Profile = ({ username, tag, location, avatar = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats: { followers, views, likes } }) => {
     
     return (
-        <div className="profile">
-            <div className="description">
-                <img
-                    src={avatar}
-                    alt={username}
-                    className="avatar"
-                />
-                <p className="name">{username}</p>
-                <p className="tag">@{tag}</p>
-                <p className="location">{location}</p>
-            </div>
+        <UserProfile>
+            <UserDescription>
+                <UserAvatar src={avatar} alt={username}/>
+                <UserName>{username}</UserName>
+                <UserTag>@{tag}</UserTag>
+                <UserLocation>{location}</UserLocation>
+            </UserDescription>
 
-            <ul className="stats">
-                <li>
-                    <span className="label">Followers</span>
-                    <span className="quantity">{followers}</span>
-                </li>
-                <li>
-                    <span className="label">Views</span>
-                    <span className="quantity">{views}</span>
-                </li>
-                <li>
-                    <span className="label">Likes</span>
-                    <span className="quantity">{likes}</span>
-                </li>
-            </ul>
-        </div>
+            <StatList>
+                <StatListItem>
+                    <StatLabel>Followers</StatLabel>
+                    <StatValue>{followers}</StatValue>
+                </StatListItem>
+                <StatListItem>
+                    <StatLabel>Views</StatLabel>
+                    <StatValue>{views}</StatValue>
+                </StatListItem>
+                <StatListItem>
+                    <StatLabel>Likes</StatLabel>
+                    <StatValue>{likes}</StatValue>
+                </StatListItem>
+            </StatList>
+        </UserProfile>
     )
 }
 
@@ -45,5 +52,3 @@ Profile.propTypes = {
             likes: propTypes.number.isRequired,
         }).isRequired
 }
-
-export default Profile;

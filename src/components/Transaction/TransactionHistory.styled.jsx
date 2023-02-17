@@ -26,4 +26,5 @@ export const TableRow = styled.tr`
 export const TableData = styled.td`
   padding: 10px 0;
   outline: 1px solid var(--bg-grey);
+  color: var(--grey);
 `;

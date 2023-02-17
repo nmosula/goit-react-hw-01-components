@@ -1,29 +1,28 @@
 import propTypes from "prop-types";
-// import Statistic from "./Statistic";
+import {
+  Container,
+  Title,
+  List,
+  ListItem,
+  Label,
+  Percentage,
+} from './Statistics.styled';
 
-const Statistics = ({ title = "", stats }) => {
-
+export const Statistics = ({ title = "", stats }) => {
     return (
-        <section className="statistics" >
+        <Container>
             {title.length > 0 && (
-                    <h2 className="title">{title}</h2>
+                    <Title>{title}</Title>
             )}
-
-                    <ul className="stat-list">
+                    <List>
                         {stats.map(stat => (
-                            <li className="item" key={stat.id}>
-                                {/* <Statistic
-                                    label={stat.label}
-                                    percentage={stat.percentage}
-                                /> */}
-                                <span className="label">{stat.label}</span>
-                                <span className="percentage">{stat.percentage}%</span>
-                            </li>
-                    
+                            <ListItem key={stat.id}>
+                                <Label>{stat.label}</Label>
+                                <Percentage>{stat.percentage}%</Percentage>
+                            </ListItem>      
                         ))}
-
-                    </ul>
-        </section>
+                    </List>
+        </Container>
     )
 }
 
@@ -36,5 +35,3 @@ Statistics.propTypes = {
         })
     ).isRequired
 }
-
-export default Statistics;
