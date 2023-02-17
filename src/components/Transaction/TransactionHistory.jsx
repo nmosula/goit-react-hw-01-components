@@ -19,11 +19,11 @@ const TransactionHistory = ({ items }) => {
         </TableHead>
 
             <tbody>
-                {items.map(item => (
-                    <TableRow key={item.id}>
-                        <TableData>{item.type}</TableData>
-                        <TableData>{item.amount}</TableData>
-                        <TableData>{item.currency}</TableData>
+                {items.map(({ id, type, amount, currency }) => (
+                    <TableRow key={id}>
+                        <TableData>{type}</TableData>
+                        <TableData>{amount}</TableData>
+                        <TableData>{currency}</TableData>
                     </TableRow>
                     
                 ))}
@@ -33,38 +33,6 @@ const TransactionHistory = ({ items }) => {
     
 }
 
-// import {
-//   Table,
-//   TableHead,
-//   HeadTableData,
-//   TableRow,
-//   TableData,
-// } from './TransactionHistory.styled';
-
-// export const TransactionHistory = ({ transactions }) => {
-//   return (
-//     <Table>
-//       <TableHead>
-//         <tr>
-//           <HeadTableData>Type</HeadTableData>
-//           <HeadTableData>Amount</HeadTableData>
-//           <HeadTableData>Currency</HeadTableData>
-//         </tr>
-//       </TableHead>
-//       <tbody>
-//         {transactions.map(({ id, type, amount, currency }) => {
-//           return (
-//             <TableRow key={id}>
-//               <TableData>{type}</TableData>
-//               <TableData>{amount}</TableData>
-//               <TableData>{currency}</TableData>
-//             </TableRow>
-//           );
-//         })}
-//       </tbody>
-//     </Table>
-//   );
-// };
 // https://github.com/Milosska/goit-react-hw-01-components
 
 
