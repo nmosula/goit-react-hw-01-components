@@ -12,7 +12,7 @@ import {
   StatValue,
 } from './Profile.styled';
 
-export const Profile = ({ username, tag, location, avatar = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats: { followers, views, likes } }) => {
+const Profile = ({ username, tag, location, avatar = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats: { followers, views, likes } }) => {
     
     return (
         <UserProfile>
@@ -52,3 +52,5 @@ Profile.propTypes = {
             likes: propTypes.number.isRequired,
         }).isRequired
 }
+
+export default Profile;

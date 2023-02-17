@@ -8,7 +8,7 @@ import {
   Percentage,
 } from './Statistics.styled';
 
-export const Statistics = ({ title = "", stats }) => {
+const Statistics = ({ title = "", stats }) => {
     return (
         <Container>
             {title.length > 0 && (
@@ -35,3 +35,5 @@ Statistics.propTypes = {
         })
     ).isRequired
 }
+
+export default Statistics;

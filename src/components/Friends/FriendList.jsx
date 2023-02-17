@@ -5,7 +5,7 @@ import {
     List,
 } from './FriendList.styled';
 
-export const FriendList = ({ friends } ) => {
+const FriendList = ({ friends } ) => {
 
     return (
         <List>
@@ -23,3 +23,5 @@ FriendList.propTypes = {
         })
     ).isRequired
 }
+
+export default FriendList;

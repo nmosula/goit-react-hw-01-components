@@ -49,4 +49,4 @@ TransactionHistory.propTypes = {
     ).isRequired
 }
 
-// export default TransactionHistory;
+export default TransactionHistory;
