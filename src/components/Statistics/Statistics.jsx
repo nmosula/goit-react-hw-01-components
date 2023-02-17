@@ -31,10 +31,10 @@ Statistics.propTypes = {
     title: propTypes.string,
     stats: propTypes.arrayOf(
         propTypes.shape({
-            label: propTypes.string,
-            percentage: propTypes.number
+            label: propTypes.string.isRequired,
+            percentage: propTypes.number.isRequired
         })
-    )
+    ).isRequired
 }
 
 export default Statistics;

@@ -22,7 +22,7 @@ FriendList.propTypes = {
         propTypes.shape({
             id: propTypes.number.isRequired  
         })
-    )
+    ).isRequired
 }
 
 export default FriendList;
